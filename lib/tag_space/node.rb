@@ -54,6 +54,8 @@ module TagSpace
         xml.index(self.index)
         xml.label(self.label)
         xml.value(self.value)
+        xml.level(self.level)
+        xml.owner(self.owner)
         if @children.size > 0
           xml.children {
             @children.each do |ch|

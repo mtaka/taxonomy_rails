@@ -31,8 +31,10 @@ module TagSpace
         xml.taxonomies {
           @taxonomies.each do |tax|
             xml.taxonomy {
+              xml.index(tax.index)
               xml.label(tax.label)
               xml.value(tax.owner)
+              xml.level(tax.level)
               xml.children {
                 puts tax.children.size
                 tax.children.each do |ch|

@@ -23,4 +23,6 @@
 .byebug_history
 
 test/test/20*.*
+**/.*.swp
+**/.*.swo
 

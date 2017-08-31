@@ -14,9 +14,16 @@ module TagSpace
       value = element['value']
       if value
         value = value.text
-        index = element['index']; index = index ? index.text.to_i : nil
-        label = element['label']; label = label ? label.text : ''
-        e = Element.create(index:, label:, value:, level: 0, owner: '')
+        index = element['index']
+        index = index ? index.text.to_i : nil
+        label = element['label']
+        label = label ? label.text : ''
+        level = element['level']
+        level = level ? level.to_i : nil
+        owner = element['owner']
+        owner = owner ? owner.text : ''
+
+        e = Element.create(index: index, label: label, value: value, level: level, owner: owner)
         Node.new(e)
       else
         nil
@@ -26,7 +33,7 @@ module TagSpace
       space = Space.new.set_reg(@reg)
 
       @doc.elements.each('//taxonomy') do |tax|
-        p gen_taxonomy(tax)
+        p gen_node(tax)
       end
 
       space
