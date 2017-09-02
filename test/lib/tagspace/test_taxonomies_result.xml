@@ -1,0 +1,245 @@
+<TagSpace>
+  <title></title>
+  <description></description>
+  <notes></notes>
+  <taxonomies>
+    <Taxonomy index="0">
+      <name>Industries</name>
+      <id>Industries</id>
+      <owner>ABC</owner>
+      <level>0</level>
+      <tags>
+        <Tag index="1">
+          <label>Manufacturing</label>
+          <value>manufacturing</value>
+          <owner></owner>
+          <level>1</level>
+          <children>
+            <Tag index="2">
+              <label>Discrte</label>
+              <value>discrete</value>
+              <owner></owner>
+              <level>2</level>
+            </Tag>
+            <Tag index="3">
+              <label>Process</label>
+              <value>process</value>
+              <owner></owner>
+              <level>2</level>
+            </Tag>
+          </children>
+        </Tag>
+        <Tag index="4">
+          <label>Distribution</label>
+          <value>distribution</value>
+          <owner></owner>
+          <level>1</level>
+          <children>
+            <Tag index="5">
+              <label>Wholesale</label>
+              <value>wholesale</value>
+              <owner></owner>
+              <level>2</level>
+            </Tag>
+            <Tag index="6">
+              <label>Retail</label>
+              <value>retail</value>
+              <owner></owner>
+              <level>2</level>
+            </Tag>
+          </children>
+        </Tag>
+        <Tag index="7">
+          <label>Services</label>
+          <value>services</value>
+          <owner></owner>
+          <level>1</level>
+          <children>
+            <Tag index="8">
+              <label>Professional</label>
+              <value>professional</value>
+              <owner></owner>
+              <level>2</level>
+            </Tag>
+            <Tag index="9">
+              <label>IT Services</label>
+              <value>it_services</value>
+              <owner></owner>
+              <level>2</level>
+            </Tag>
+            <Tag index="10">
+              <label>Logistics</label>
+              <value>logistics</value>
+              <owner></owner>
+              <level>2</level>
+            </Tag>
+          </children>
+        </Tag>
+        <Tag index="11">
+          <label>Media/Energy</label>
+          <value>media_and_energy</value>
+          <owner></owner>
+          <level>1</level>
+        </Tag>
+        <Tag index="12">
+          <label>Media</label>
+          <value>media</value>
+          <owner></owner>
+          <level>1</level>
+        </Tag>
+        <Tag index="13">
+          <label>Energy</label>
+          <value>energy</value>
+          <owner></owner>
+          <level>1</level>
+        </Tag>
+        <Tag index="14">
+          <label>Finance</label>
+          <value>finance</value>
+          <owner></owner>
+          <level>1</level>
+          <children>
+            <Tag index="15">
+              <label>Banking</label>
+              <value>banking</value>
+              <owner></owner>
+              <level>2</level>
+            </Tag>
+            <Tag index="16">
+              <label>Security</label>
+              <value>security</value>
+              <owner></owner>
+              <level>2</level>
+            </Tag>
+            <Tag index="17">
+              <label>Insurance</label>
+              <value>insurance</value>
+              <owner></owner>
+              <level>2</level>
+            </Tag>
+          </children>
+        </Tag>
+        <Tag index="18">
+          <label>Public</label>
+          <value>public</value>
+          <owner></owner>
+          <level>1</level>
+          <children>
+            <Tag index="19">
+              <label>Government</label>
+              <value>government</value>
+              <owner></owner>
+              <level>2</level>
+            </Tag>
+            <Tag index="20">
+              <label>Education</label>
+              <value>education</value>
+              <owner></owner>
+              <level>2</level>
+            </Tag>
+            <Tag index="21">
+              <label>Medical</label>
+              <value>medical</value>
+              <owner></owner>
+              <level>2</level>
+            </Tag>
+          </children>
+        </Tag>
+      </tags>
+    </Taxonomy>
+    <Taxonomy index="23">
+      <name>Themes</name>
+      <id>themes</id>
+      <owner>PQR</owner>
+      <level>0</level>
+      <tags>
+        <Tag index="24">
+          <label>Digital</label>
+          <value>digital</value>
+          <owner></owner>
+          <level>1</level>
+          <children>
+            <Tag index="25">
+              <label>Digital Marketing</label>
+              <value>digital_marketing</value>
+              <owner></owner>
+              <level>2</level>
+            </Tag>
+          </children>
+        </Tag>
+        <Tag index="26">
+          <label>HybridIT</label>
+          <value>hybrid_it</value>
+          <owner></owner>
+          <level>1</level>
+          <children>
+            <Tag index="27">
+              <label>Cloud</label>
+              <value>cloud</value>
+              <owner></owner>
+              <level>2</level>
+            </Tag>
+          </children>
+        </Tag>
+        <Tag index="28">
+          <label>Workstyle</label>
+          <value>workstyle</value>
+          <owner></owner>
+          <level>1</level>
+          <children>
+            <Tag index="29">
+              <label>Mobile</label>
+              <value>mobile</value>
+              <owner></owner>
+              <level>2</level>
+            </Tag>
+          </children>
+        </Tag>
+      </tags>
+    </Taxonomy>
+    <Taxonomy index="33">
+      <name>Applications</name>
+      <id>applications</id>
+      <owner>XYZ</owner>
+      <level>0</level>
+      <tags>
+        <Tag index="34">
+          <label>ERP</label>
+          <value>erp</value>
+          <owner></owner>
+          <level>1</level>
+        </Tag>
+        <Tag index="35">
+          <label>CRM</label>
+          <value>crm</value>
+          <owner></owner>
+          <level>1</level>
+        </Tag>
+        <Tag index="36">
+          <label>SFA</label>
+          <value>sfa</value>
+          <owner></owner>
+          <level>1</level>
+        </Tag>
+        <Tag index="37">
+          <label>SCM</label>
+          <value>scm</value>
+          <owner></owner>
+          <level>1</level>
+        </Tag>
+        <Tag index="38">
+          <label>HR</label>
+          <value>hr</value>
+          <owner></owner>
+          <level>1</level>
+        </Tag>
+        <Tag index="39">
+          <label>Documentation</label>
+          <value>documentation</value>
+          <owner></owner>
+          <level>1</level>
+        </Tag>
+      </tags>
+    </Taxonomy>
+  </taxonomies>
+</TagSpace>

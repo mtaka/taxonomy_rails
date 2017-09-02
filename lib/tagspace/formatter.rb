@@ -51,13 +51,13 @@ module Tagspace
   end
 
   class Space
-    def xml_serialize title='', description='', notes=''
+    def xml_serialize title=nil, description=nil, notes=nil
       ret = ''
       xml = Builder::XmlMarkup.new(target: ret, indent: 2)
       xml.TagSpace {
-        xml.title title
-        xml.description description
-        xml.notes notes
+        xml.title title || @title
+        xml.description description || @description
+        xml.notes notes || @notes
         xml.taxonomies {
           @taxonomies.each do |t|
             xml << t.to_xml
