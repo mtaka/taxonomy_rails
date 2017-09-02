@@ -17,5 +17,10 @@ module TaxonomyBuilder
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+
+    # 2017.09.02 Switched to API mode
+    # https://railsguides.jp/api_app.html
+    config.api_only = true
+
   end
 end
