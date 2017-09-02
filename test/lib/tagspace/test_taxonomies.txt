@@ -1,12 +1,3 @@
-require 'test/unit'
-require './lib/tagspace'
-
-include Tagspace
-include Test::Unit::Assertions
-
-
-
-src =<<EOS
 ABC|Industries||||Industries
 ||Manufacturing|||manufacturing
 |||Discrte||discrete
@@ -47,22 +38,3 @@ XYZ|Applications||||applications
 ||SCM|||scm
 ||HR|||hr
 ||Documentation|||documentation
-EOS
-
-Taxonomy.from_element_array(text_to_element_arr(src, VBAR)) do |n|
-  puts [n.index, n.label].join(SP)
-end
-
-__END__
-text_to_element_arr(src, VBAR).slice_before{|e|
-  e.level==0
-}.each do |arr|
-  top = arr.shift
-  taxonomy = Taxonomy.new(top)
-  p taxonomy
-end
-
-
-
-
-

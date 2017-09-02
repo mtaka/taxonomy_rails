@@ -67,7 +67,14 @@ XYZ|Applications||||applications
 ||Documentation|||documentation
 EOS
 
+=begin
 text_to_element_arr(src, VBAR).each do |e|
+  p e
+end
+=end
+
+t_file = './test/lib/tagspace/test_taxonomies.txt'
+file_to_element_arr(t_file, VBAR).each do |e|
   p e
 end
 

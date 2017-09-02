@@ -9,15 +9,21 @@ module Tagspace
       @element = element
       @children = []
     end
-    def build elements, level
+
+    def build_element_array elements, level, &block
       return self if elements.size==0
       elements.slice_before{|e|
         e.level == level
       }.each do |sub_arr|
-        @children << Node.new(sub_arr.shift).build(sub_arr, level+1)
+        #ch = Node.new(sub_arr.shift).build_element_array(sub_arr, level+1, &block)
+        ch = Node.new(sub_arr.shift)
+        yield ch if block_given?
+        ch = ch.build_element_array(sub_arr, level+1, &block)
+        @children << ch
       end
       self
     end
+
     def to_h
       hash = {label: label, value: value, index: index, level: level, owner: owner}
       if @children.size > 0

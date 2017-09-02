@@ -10,6 +10,12 @@ module Tagspace
       e =Element.from_arr(i, arr)
     }.select{|e| e!= nil}
   end
+  def file_to_matrix (path, fs=TAB)
+    text_to_matrix(open(path).read, fs)
+  end
+  def file_to_element_arr (path, fs=TAB)
+    text_to_element_arr(open(path).read, fs)
+  end
 
   class Element 
 
