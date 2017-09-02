@@ -49,9 +49,9 @@ XYZ|Applications||||applications
 ||Documentation|||documentation
 EOS
 
-Taxonomy.from_element_array(text_to_element_arr(src, VBAR)) do |n|
-  puts [n.index, n.label].join(SP)
-end
+#Taxonomy.new.build_element_array(text_to_element_arr(src, VBAR)) do |n|
+  #puts [n.index, n.label].join(SP)
+#end
 
 __END__
 text_to_element_arr(src, VBAR).slice_before{|e|

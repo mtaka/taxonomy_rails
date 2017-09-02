@@ -5,6 +5,9 @@ module Tagspace
     extend Forwardable
 
     delegate [:label, :value, :index, :level, :owner] => :@element
+
+    attr_reader :element, :children
+
     def initialize element=nil
       @element = element
       @children = []
