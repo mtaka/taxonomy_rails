@@ -51,6 +51,7 @@ module Tagspace
   end
 
   class Space
+  extend Formattable
     def xml_serialize title=nil, description=nil, notes=nil
       ret = ''
       xml = Builder::XmlMarkup.new(target: ret, indent: 2)

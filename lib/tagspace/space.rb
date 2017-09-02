@@ -17,5 +17,15 @@ module Tagspace
       end
       self
     end
+    def to_h
+      hash = {
+        refs: {
+          labels: Hash[@refs.map{|k,v|[k,v.label]}],
+          values: Hash[@refs.map{|k,v|[k,v.value]}]
+        },
+        taxonomies: @taxonomies.map{|t|t.to_h}
+      }
+      hash
+    end
   end
 end
