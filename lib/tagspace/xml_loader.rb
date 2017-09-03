@@ -11,18 +11,24 @@ module Tagspace
       self
     end
     def build_space
-      Space.from_xml_doc(@doc)
+      Tagspace::Space.from_xml_doc(@doc)
+    end
+  end
+  class Element
+    def self.from_xml_node(e); 
+      index = e.xpath('@index').text.to_i
+      label = e.xpath('label').text
+      value = e.xpath('value').text
+      level = e.xpath('level').text.to_i
+      owner = e.xpath('owner').text
+      Element.new(index, label, value, level, owner)
     end
   end
   class Node
     def self.from_xml_node(e, space); Node.new.build_from_xml_node(e, space); end
     def build_from_xml_node e, space
-      @index = e.xpath('@index').text.to_i
-      @label = e.xpath('label').text
-      @value = e.xpath('value').text
-      @level = e.xpath('level').text.to_i
-      @owner = e.xpath('owner').text
-      space.refs[@index] = self
+      @element = Element.from_xml_node(e)
+      space.refs[@element.index] = self
       e.xpath('children/Tag').each do |t|
         @children << Node.from_xml_node(t, space)
       end
@@ -32,12 +38,8 @@ module Tagspace
   class Taxonomy
     def self.from_xml_node(e, space); Taxonomy.new.build_from_xml_node(e, space); end
     def build_from_xml_node e, space
-      @index = e.xpath('@index').text.to_i
-      @label = e.xpath('name').text
-      @value = e.xpath('id').text
-      @level = e.xpath('level').text.to_i
-      @owner = e.xpath('owner').text
-      space.refs[@index] = self
+      @element = Element.from_xml_node(e)
+      space.refs[@element.index] = self
       e.xpath('tags/Tag').each do |t|
         @children << Node.from_xml_node(t, space)
       end

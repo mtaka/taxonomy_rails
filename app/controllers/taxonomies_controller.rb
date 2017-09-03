@@ -10,6 +10,7 @@ class TaxonomiesController < ApplicationController
   # GET /taxonomies/1
   # GET /taxonomies/1.json
   def show
+    render json: @taxonomy.to_h
   end
 
   # POST /taxonomies

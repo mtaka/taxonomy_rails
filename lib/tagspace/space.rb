@@ -1,6 +1,8 @@
 module Tagspace
   class Space
+
     attr_reader :taxonomies, :refs
+
     def initialize
       @title, @description, @notes = '', '', ''
       @taxonomies, @refs = [], {}
