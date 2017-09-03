@@ -22,5 +22,14 @@ module TaxonomyBuilder
     # https://railsguides.jp/api_app.html
     config.api_only = true
 
+    # 2017.09.03 Allowing Cross Domain Access
+    # http://qiita.com/tentenmitsunori/items/dbe80b5ead421cac8d2f
+    config.middleware.use Rack::Cors do
+      allow do
+        origins '*'
+        resource '*', :headers => :any, :methods => [:get, :post, :options]
+      end
+    end
+
   end
 end
