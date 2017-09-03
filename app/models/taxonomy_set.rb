@@ -1,0 +1,2 @@
+class TaxonomySet < ApplicationRecord
+end

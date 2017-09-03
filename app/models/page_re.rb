@@ -1,0 +1,2 @@
+class PageRe < ApplicationRecord
+end
